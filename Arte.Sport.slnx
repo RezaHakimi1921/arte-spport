@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/Arte.Sport.Core/Arte.Sport.Core.csproj" />
+  <Project Path="src/Arte.Sport.Api/Arte.Sport.Api.csproj" />
+  <Project Path="tests/Arte.Sport.Tests/Arte.Sport.Tests.csproj" />
+</Solution>
