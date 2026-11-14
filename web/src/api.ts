@@ -48,3 +48,11 @@ export function jalali(value: string) {
 export function dayLabel(day: Date) {
   return new Intl.DateTimeFormat("fa-IR-u-ca-persian", { weekday: "long", day: "numeric", month: "short" }).format(day);
 }
+
+export function clock(value: string) {
+  return new Intl.DateTimeFormat("fa-IR", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Tehran" }).format(new Date(value));
+}
+
+export function persianDate(day: Date, options: Intl.DateTimeFormatOptions) {
+  return new Intl.DateTimeFormat("fa-IR-u-ca-persian", { timeZone: "Asia/Tehran", ...options }).format(day);
+}

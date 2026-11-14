@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #e7dfd8; display: flex; flex-wrap: wrap; gap: 28px; padding: 32px; font-family: Tahoma, "Segoe UI", sans-serif; color: #343033; }
+  .art { width: 390px; background: #F4EDE8; border-radius: 28px; overflow: hidden; position: relative; display: flex; flex-direction: column; min-height: 780px; }
+  .wide { width: 1180px; min-height: 280px; padding: 28px; }
+  .pad { padding: 22px 20px 96px; display: flex; flex-direction: column; gap: 14px; flex: 1; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .mark { width: 36px; height: 36px; border-radius: 12px; background: #713F55; position: relative; }
+  .mark i { position: absolute; inset: 11px; border: 2px solid #F4EDE8; border-radius: 50%; }
+  h1 { margin: 0; font-size: 28px; line-height: 1.45; font-weight: 700; }
+  h2 { margin: 0; font-size: 18px; line-height: 1.5; }
+  p { margin: 0; }
+  .over { color: #713F55; font-size: 13px; font-weight: 700; }
+  .muted { color: #5c5458; font-size: 14px; line-height: 1.7; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; background: #efe6e0; border-radius: 14px; }
+  .seg span { text-align: center; padding: 10px; border-radius: 10px; color: #5c5458; font-size: 14px; }
+  .seg .on { background: #fff; color: #343033; font-weight: 700; }
+  label { font-size: 13px; font-weight: 700; }
+  .field { height: 52px; background: #fff; border: 1px solid #e4d9d2; border-radius: 12px; }
+  .btn { height: 56px; border-radius: 12px; background: #713F55; color: #fff; display: grid; place-items: center; font-weight: 700; }
+  .ghost { height: 48px; border-radius: 12px; background: #fff; color: #713F55; border: 1px solid #D9A6AC; display: grid; place-items: center; font-weight: 700; }
+  .card { background: #fff; border: 1px solid #e4d9d2; border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .alert { border-inline-start: 4px solid #8E2F3A; }
+  .wait { border-inline-start: 4px solid #8A5A2F; }
+  .ok { border-inline-start: 4px solid #2F6B4F; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .chip { padding: 8px 12px; border-radius: 12px; background: #fff; border: 1px solid #e4d9d2; font-size: 13px; }
+  .chip.on { background: #713F55; color: #fff; border-color: #713F55; }
+  .chips { display: flex; gap: 8px; }
+  .tag { font-size: 13px; font-weight: 700; }
+  .tag.bad { color: #8E2F3A; }
+  .tag.wait { color: #8A5A2F; }
+  .tag.ok { color: #2F6B4F; }
+  .nav { position: absolute; inset-inline: 0; bottom: 0; height: 72px; background: #fff; border-top: 1px solid #e4d9d2; display: flex; }
+  .nav b { flex: 1; display: grid; place-items: center; font-size: 12px; font-weight: 400; color: #5c5458; }
+  .nav b.on { color: #713F55; font-weight: 700; }
+  .hero { background: #713F55; color: #fff; border: 0; }
+  .hero .muted, .hero .over { color: #F4EDE8; }
+  .pair { display: flex; gap: 8px; }
+  .pair .btn, .pair .ghost { flex: 1; height: 44px; }
+  .flow { display: flex; gap: 12px; align-items: stretch; }
+  .step { background: #fff; border: 1px solid #e4d9d2; border-radius: 16px; padding: 14px; width: 180px; }
+  .step strong { display: block; margin-bottom: 6px; }
+  .swatch { width: 72px; height: 72px; border-radius: 16px; }
+  .palette { display: flex; gap: 12px; align-items: flex-end; }
+  .code { height: 64px; background: #fff; border: 1px solid #e4d9d2; border-radius: 12px; display: grid; place-items: center; font-size: 28px; letter-spacing: 0.35em; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<section class="art wide">
+  <p class="over">فلوهای هسته، بدون رسید و بدون هوش مصنوعی</p>
+  <h1>از ورود تا حضور</h1>
+  <div class="flow">
+    <div class="step"><strong>۱. ورود</strong><span class="muted">رمز یا کد پیامکی. نام کاربری موبایل است.</span></div>
+    <div class="step"><strong>۲. خانه</strong><span class="muted">صف کار: لغو تازه‌وارد، حضور باز، جلسهٔ امروز.</span></div>
+    <div class="step"><strong>۳. شاگرد</strong><span class="muted">ثبت با موبایل تا خودش بتواند وارد شود.</span></div>
+    <div class="step"><strong>۴. تقویم</strong><span class="muted">روز شمسی، جلسهٔ خصوصی یا گروهی.</span></div>
+    <div class="step"><strong>۵. حضور</strong><span class="muted">حاضر یا غایب، و ورود شیفت کارکنان.</span></div>
+    <div class="step"><strong>۶. صندوق</strong><span class="muted">لغو شاگرد را مدیر می‌بیند و «دیدم» می‌زند.</span></div>
+  </div>
+</section>
+
+<section class="art wide">
+  <p class="over">پالت قفل‌شده</p>
+  <h2>Modern Feminine</h2>
+  <div class="palette">
+    <div><div class="swatch" style="background:#713F55"></div><p>آلو</p></div>
+    <div><div class="swatch" style="background:#F4EDE8;border:1px solid #e4d9d2"></div><p>عاج</p></div>
+    <div><div class="swatch" style="background:#fff;border:1px solid #e4d9d2"></div><p>کارت</p></div>
+    <div><div class="swatch" style="background:#343033"></div><p>متن</p></div>
+    <div><div class="swatch" style="background:#D9A6AC"></div><p>تزئین</p></div>
+    <div><div class="swatch" style="background:#B88C68"></div><p>جزئیات</p></div>
+    <div><div class="swatch" style="background:#2F6B4F"></div><p>حاضر</p></div>
+    <div><div class="swatch" style="background:#8A5A2F"></div><p>انتظار</p></div>
+    <div><div class="swatch" style="background:#8E2F3A"></div><p>لغو</p></div>
+  </div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <div class="brand"><span class="mark"><i></i></span>آرتِه اسپرت</div>
+    <div>
+      <p class="over">خوش آمدید</p>
+      <h1>وارد حساب شوید</h1>
+      <p class="muted">با نام کاربری، یا با شمارهٔ موبایل ثبت‌شده.</p>
+    </div>
+    <div class="seg"><span class="on">رمز عبور</span><span>کد پیامکی</span></div>
+    <label>موبایل یا نام کاربری</label>
+    <div class="field"></div>
+    <label>رمز عبور</label>
+    <div class="field"></div>
+    <div class="btn">ورود به حساب</div>
+  </div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <div class="brand"><span class="mark"><i></i></span>آرتِه اسپرت</div>
+    <div>
+      <p class="over">تأیید شماره</p>
+      <h1>کد را وارد کنید</h1>
+      <p class="muted">کد پنج‌رقمی به ۰۹۱۲۳۴۵۶۷۸۹ پیامک شده.</p>
+    </div>
+    <div class="code">•••••</div>
+    <p class="muted">ارسال دوباره تا ۰۱:۵۹</p>
+    <div class="btn">تأیید و ورود</div>
+    <div class="ghost">تغییر شماره</div>
+  </div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <div class="card hero">
+      <p class="over">سوپر ادمین · شعبه مرکزی</p>
+      <h1>سلام رضا</h1>
+      <p class="muted">دو کار همین حالا مانده است.</p>
+    </div>
+    <div class="card alert">
+      <p class="tag bad">لغو جلسه</p>
+      <h2>سارا وقت یوگا را لغو کرد</h2>
+      <p class="muted">ساعت ۱۰، سالن آینه. کلاس برای بقیه می‌ماند.</p>
+    </div>
+    <div class="card wait">
+      <p class="tag wait">حضور باز</p>
+      <h2>پیلاتس عصر هنوز حضور ندارد</h2>
+      <p class="muted">ساعت ۱۶. دو شاگرد رزرو دارند.</p>
+    </div>
+    <div class="card">
+      <h2>یوگا · ساعت ۱۰</h2>
+      <p class="muted">سالن آینه · ندا · ۲ شاگرد</p>
+    </div>
+  </div>
+  <div class="nav"><b class="on">خانه</b><b>شاگردها</b><b>تقویم</b><b>حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <h1>شاگردها</h1>
+    <div class="card"><h2>سارا محمدی</h2><p class="muted">۰۹۱۲۱۱۱۱۱۱۱ · مربی ندا</p></div>
+    <div class="card"><h2>مریم کریمی</h2><p class="muted">۰۹۱۳۲۲۲۲۲۲۲ · بدون مربی</p></div>
+    <div class="card"><h2>نگار احمدی</h2><p class="muted">بدون موبایل · نمی‌تواند وارد شود</p></div>
+    <div class="btn">شاگرد جدید</div>
+  </div>
+  <div class="nav"><b>خانه</b><b class="on">شاگردها</b><b>تقویم</b><b>حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <p class="over">شاگرد جدید</p>
+    <h1>نام و موبایل</h1>
+    <p class="muted">با موبایل، شاگرد خودش کد می‌گیرد و وارد می‌شود.</p>
+    <label>نام</label>
+    <div class="field"></div>
+    <label>موبایل</label>
+    <div class="field"></div>
+    <div class="btn">ثبت شاگرد</div>
+  </div>
+  <div class="nav"><b>خانه</b><b class="on">شاگردها</b><b>تقویم</b><b>حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <h1>تقویم</h1>
+    <div class="chips"><span class="chip on">امروز ۲۳</span><span class="chip">فردا ۲۴</span><span class="chip">دوشنبه ۲۵</span></div>
+    <div class="card">
+      <div class="row"><h2>یوگا</h2><span class="tag wait">منتظر حضور</span></div>
+      <p class="muted">۱۰:۰۰ تا ۱۱:۰۰ · سالن آینه · خصوصی</p>
+    </div>
+    <div class="card">
+      <div class="row"><h2>پیلاتس</h2><span class="tag ok">منتشرشده</span></div>
+      <p class="muted">۱۶:۰۰ تا ۱۷:۰۰ · سالن آینه · گروهی</p>
+    </div>
+    <div class="btn">جلسهٔ جدید</div>
+  </div>
+  <div class="nav"><b>خانه</b><b>شاگردها</b><b class="on">تقویم</b><b>حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <p class="over">امروز ۲۳ آبان</p>
+    <h1>یوگا</h1>
+    <p class="muted">۱۰:۰۰ تا ۱۱:۰۰ · سالن آینه · مربی ندا</p>
+    <div class="card"><h2>سارا محمدی</h2><p class="muted">رزرو شده</p></div>
+    <div class="card"><h2>مریم کریمی</h2><p class="muted">رزرو شده</p></div>
+    <div class="btn">ثبت حضور</div>
+  </div>
+  <div class="nav"><b>خانه</b><b>شاگردها</b><b class="on">تقویم</b><b>حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <div class="card ok">
+      <p class="tag ok">ورود شیفت</p>
+      <h2>ساعت ۱۰:۰۲ ثبت شد</h2>
+    </div>
+    <h1>حضور امروز</h1>
+    <div class="card">
+      <h2>سارا · یوگا</h2>
+      <div class="pair"><div class="btn">حاضر</div><div class="ghost">غایب</div></div>
+    </div>
+    <div class="card">
+      <h2>مریم · یوگا</h2>
+      <div class="pair"><div class="btn">حاضر</div><div class="ghost">غایب</div></div>
+    </div>
+  </div>
+  <div class="nav"><b>خانه</b><b>شاگردها</b><b>تقویم</b><b class="on">حضور</b><b>صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <h1>صندوق</h1>
+    <div class="card alert">
+      <div class="row"><h2>لغو جلسه</h2><span class="tag bad">جدید</span></div>
+      <p class="muted">سارا وقت یوگا ساعت ۱۰ را لغو کرد. کلاس گروهی سر جایش است.</p>
+      <div class="ghost">دیدم</div>
+    </div>
+    <p class="muted">وقتی چیزی نباشد، اینجا خالی می‌ماند و دلیلش نوشته می‌شود.</p>
+  </div>
+  <div class="nav"><b>خانه</b><b>شاگردها</b><b>تقویم</b><b>حضور</b><b class="on">صندوق</b></div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <p class="over">لینک سارا، بدون ورود</p>
+    <h1>سلام سارا</h1>
+    <p class="muted">فقط وضعیت خودت. مبلغ و تصویر رسید اینجا نیست.</p>
+    <div class="card">
+      <h2>جلسهٔ بعدی</h2>
+      <p class="muted">پیلاتس · فردا ۱۶:۰۰ · سالن آینه</p>
+    </div>
+    <div class="card ok">
+      <h2>آخرین حضور</h2>
+      <p class="tag ok">حاضر در یوگا</p>
+    </div>
+    <div class="card wait">
+      <h2>رسید</h2>
+      <p class="tag wait">در انتظار تأیید</p>
+    </div>
+  </div>
+</section>
+
+<section class="art">
+  <div class="pad">
+    <div class="card hero">
+      <p class="over">شاگرد · شعبه مرکزی</p>
+      <h1>سلام سارا</h1>
+      <p class="muted">جلسهٔ بعدی فردا ساعت ۱۶ است.</p>
+    </div>
+    <div class="card">
+      <h2>پیلاتس</h2>
+      <p class="muted">فردا ۱۶:۰۰ تا ۱۷:۰۰ · سالن آینه</p>
+      <div class="ghost">لغو وقت من</div>
+    </div>
+    <p class="muted">کلاس برای بقیه می‌ماند. فقط وقت تو برداشته می‌شود.</p>
+  </div>
+  <div class="nav"><b class="on">خانه</b><b>تقویم</b><b>صندوق</b></div>
+</section>
+
+</body>
+</html>
