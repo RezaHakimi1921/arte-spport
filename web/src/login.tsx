@@ -126,7 +126,6 @@ export function Login({ onDone }: { onDone: () => Promise<void> }) {
           {!busy && <Icon name="arrow" size={18} />}
         </button>
       </form>
-      <div className="secure-note"><Icon name="shield" size={16} /><span>هر باشگاه فقط دادهٔ خودش را می‌بیند.</span></div>
     </Frame>
   );
 }
